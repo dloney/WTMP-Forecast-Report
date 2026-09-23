@@ -256,6 +256,14 @@ public class DisplayForecastReportsSelector extends RmaJDialog
 				}
 			}
 		});
+
+		// Handle the window's "X" (close) button the same way as the Close button
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				setVisible(false);
+			}
+		});
 	}
 
 	private void tableRowSelected(ListSelectionEvent e)
