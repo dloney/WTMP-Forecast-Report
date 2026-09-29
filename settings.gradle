@@ -44,5 +44,17 @@ dependencyResolutionManagement {
             url = uri('https://repo.osgeo.org/repository/release/')
         }
         mavenCentral()
+        // New GitLab mirror repo
+        maven {
+            name = 'GitLabMirror'
+            url = uri('https://gitlab.bor.doi.net/api/v4/projects/992/packages/maven')
+            credentials(PasswordCredentials) {
+                username = System.getenv("GITLAB_USER")
+                password  = System.getenv("GITLAB_TOKEN")
+            }
+            authentication {
+                header(BasicAuthentication)
+            }
+        }
     }
 }

@@ -93,12 +93,12 @@ The specific configuration needed for local will vary based on the developer's e
 	
 	<br>The end of the build process will either result in a green "BUILD SUCCESSFUL" notification or a red "BUILD FAILED" notification. The build is configured to enable a stack trace on failure to aid in debugging. Resolve any errors and repeat the build until it successfully completes.
 	
-	<br>It is important to note that the build will execute for whatever branch the repository is currently on. This is also important for downstream repositories that will potentially key off of local packages named by branch. As the Action Panel has no upstream dependencies, this does not appply to this repository. 
+	<br>It is important to note that the build will execute for whatever branch the repository is currently on. This is also important for downstream repositories that will potentially key off of local packages named by branch. 
 
 
 9) Publishing the gradle package
 
-	When the gradle build completes, the user may access the build/libs folder within the target repository to obtain the complied usbr-actionpanel-plugin-YYYY.MM.DD.jar file. This may be sufficient to replace the existing Action Panel jar within the WAT if one is testing only the Action Panel. However, downstream repositories may require access through gradle to meet their build dependencies lest they default back to GitHub. To do this, one needs to publish the local upstream dependency for gradle to access. 
+	When the gradle build completes, the user may access the build/libs folder within the target repository to obtain the complied usbr-forecast-report-YYYY.MM.DD.jar file. This may be sufficient to replace the existing jar within the WAT if one is testing only tis repository. However, downstream repositories may require access through gradle to meet their build dependencies lest they default back to GitHub. To do this, one needs to publish the local upstream dependency for gradle to access. 
 	
 	<br>If building downstream repositories, make the Action Panel local build available to them via the following command from the command prompt located in the target repository:
 	
